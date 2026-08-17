@@ -1,0 +1,754 @@
+/* =========================================================
+   SHERIF'S ASSISTANT
+   COMPLETE CSS
+========================================================= */
+
+/* =========================================================
+   NAVBAR BUTTON
+========================================================= */
+
+.sherif-assistant-nav {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sherif-assistant-nav:hover,
+.sherif-assistant-nav.active {
+  color: #ffffff;
+}
+
+.sherif-assistant-nav:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   NAV STATUS DOT
+========================================================= */
+
+.assistant-status-dot {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border-radius: 50%;
+  background: #c99cff;
+  box-shadow:
+    0 0 8px rgba(201, 156, 255, 0.9),
+    0 0 18px rgba(201, 156, 255, 0.45);
+  animation: assistantPulse 2s ease-in-out infinite;
+}
+
+@keyframes assistantPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.75);
+  }
+}
+
+/* =========================================================
+   MAIN PANEL
+========================================================= */
+
+.sherif-assistant-panel {
+  position: fixed;
+  z-index: 99999;
+  top: 82px;
+  right: 32px;
+  width: min(430px, calc(100vw - 32px));
+  height: min(620px, calc(100vh - 105px));
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    rgba(25, 20, 32, 0.98),
+    rgba(8, 8, 12, 0.99)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.7),
+    0 0 60px rgba(150, 90, 255, 0.08);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-14px) scale(0.96);
+  transform-origin: top right;
+  pointer-events: none;
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease,
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sherif-assistant-panel.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.assistant-header {
+  flex: 0 0 auto;
+  min-height: 78px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.assistant-header-left {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* =========================================================
+   ORB
+========================================================= */
+
+.assistant-orb {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 28%,
+    #ffffff 0%,
+    #d9b8ff 20%,
+    #a56bf0 42%,
+    #4a2770 67%,
+    #0b0810 100%
+  );
+  box-shadow:
+    0 0 18px rgba(183, 125, 255, 0.5),
+    inset 0 0 14px rgba(255, 255, 255, 0.25);
+}
+
+.assistant-orb::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1px solid rgba(203, 165, 255, 0.15);
+  animation: orbRotate 4s linear infinite;
+}
+
+@keyframes orbRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.assistant-orb span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow:
+    0 0 10px #ffffff,
+    0 0 20px #c99cff;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.assistant-heading {
+  min-width: 0;
+}
+
+.assistant-heading h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.assistant-heading p {
+  margin: 4px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: rgba(255, 255, 255, 0.43);
+  font-size: 10px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+}
+
+.online-dot {
+  width: 5px;
+  height: 5px;
+  flex: 0 0 5px;
+  border-radius: 50%;
+  background: #b994ff;
+  box-shadow: 0 0 8px #b994ff;
+}
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.assistant-close {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.65);
+  font-family: inherit;
+  font-size: 21px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.assistant-close:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(90deg);
+}
+
+/* =========================================================
+   MESSAGE AREA
+========================================================= */
+
+.assistant-messages {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.assistant-messages::-webkit-scrollbar {
+  width: 4px;
+}
+
+.assistant-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.assistant-messages::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+}
+
+.assistant-messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.assistant-message {
+  flex: 0 0 auto;
+  width: fit-content;
+  max-width: 86%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border-radius: 15px;
+  font-size: 13px;
+  line-height: 1.65;
+  white-space: normal;
+  overflow: visible;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  animation: messageIn 0.3s ease both;
+}
+
+/* =========================================================
+   MESSAGE TEXT
+========================================================= */
+
+.assistant-message-text {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  white-space: pre-wrap;
+  overflow: visible;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* =========================================================
+   MESSAGE ANIMATION
+========================================================= */
+
+@keyframes messageIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   BOT MESSAGE
+========================================================= */
+
+.bot-message {
+  align-self: flex-start;
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-top-left-radius: 5px;
+}
+
+/* =========================================================
+   USER MESSAGE
+========================================================= */
+
+.user-message {
+  align-self: flex-end;
+  flex-shrink: 0;
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    rgba(150, 94, 224, 0.82),
+    rgba(103, 63, 160, 0.78)
+  );
+  border: 1px solid rgba(205, 167, 255, 0.1);
+  border-top-right-radius: 5px;
+}
+
+/* =========================================================
+   SCROLL ANCHOR
+========================================================= */
+
+.assistant-scroll-anchor {
+  width: 1px;
+  height: 1px;
+  flex: 0 0 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* =========================================================
+   TYPING
+========================================================= */
+
+.typing {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  padding: 14px 16px;
+}
+
+.typing span {
+  width: 5px;
+  height: 5px;
+  flex: 0 0 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  animation: typingAnimation 1.2s infinite;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes typingAnimation {
+  0%,
+  60%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+/* =========================================================
+   SUGGESTIONS
+========================================================= */
+
+.assistant-suggestions {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 0 20px 14px;
+  box-sizing: border-box;
+}
+
+.assistant-suggestions button {
+  max-width: 100%;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(255, 255, 255, 0.62);
+  font-family: inherit;
+  font-size: 10px;
+  line-height: 1.3;
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.assistant-suggestions button:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(200, 160, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.assistant-input-wrapper {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 16px;
+  padding: 6px 6px 6px 14px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.assistant-input-wrapper:focus-within {
+  border-color: rgba(194, 151, 255, 0.35);
+  box-shadow: 0 0 20px rgba(157, 101, 220, 0.08);
+}
+
+.assistant-input-wrapper input {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.assistant-input-wrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.assistant-input-wrapper input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   SEND BUTTON
+========================================================= */
+
+.assistant-input-wrapper button {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 10px;
+  background: rgba(188, 141, 255, 0.18);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.assistant-input-wrapper button:hover:not(:disabled) {
+  background: rgba(188, 141, 255, 0.35);
+  transform: translateX(2px);
+}
+
+.assistant-input-wrapper button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.assistant-footer {
+  flex: 0 0 auto;
+  padding: 10px 20px 13px;
+  box-sizing: border-box;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.23);
+  font-size: 9px;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+  .sherif-assistant-panel {
+    right: 20px;
+    width: min(420px, calc(100vw - 40px));
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  /* NAV */
+  .sherif-assistant-nav {
+    padding: 7px 8px;
+    font-size: 11px;
+  }
+
+  .assistant-nav-text {
+    display: none;
+  }
+
+  .sherif-assistant-nav::after {
+    content: "SA";
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  /* PANEL */
+  .sherif-assistant-panel {
+    top: 72px;
+    right: 12px;
+    width: calc(100vw - 24px);
+    height: min(620px, calc(100vh - 88px));
+    max-height: calc(100vh - 88px);
+    border-radius: 18px;
+  }
+
+  /* HEADER */
+  .assistant-header {
+    min-height: 70px;
+    padding: 0 16px;
+  }
+
+  /* ORB */
+  .assistant-orb {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  /* TITLE */
+  .assistant-heading h3 {
+    font-size: 14px;
+  }
+
+  .assistant-heading p {
+    font-size: 9px;
+  }
+
+  /* MESSAGES */
+  .assistant-messages {
+    padding: 16px;
+    gap: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  /* MESSAGE */
+  .assistant-message {
+    width: auto;
+    max-width: 88%;
+    flex: 0 0 auto;
+    padding: 11px 13px;
+    font-size: 12px;
+    line-height: 1.65;
+    white-space: normal;
+    overflow: visible;
+    overflow-wrap: anywhere;
+  }
+
+  .assistant-message-text {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  /* SUGGESTIONS */
+  .assistant-suggestions {
+    padding: 0 16px 12px;
+    gap: 6px;
+  }
+
+  .assistant-suggestions button {
+    font-size: 9px;
+    padding: 7px 9px;
+  }
+
+  /* INPUT */
+  .assistant-input-wrapper {
+    margin: 0 12px;
+    padding: 6px 6px 6px 12px;
+    border-radius: 13px;
+  }
+
+  .assistant-input-wrapper input {
+    font-size: 12px;
+  }
+
+  /* FOOTER */
+  .assistant-footer {
+    padding: 9px 15px 12px;
+    font-size: 8px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .sherif-assistant-panel {
+    top: 64px;
+    right: 8px;
+    width: calc(100vw - 16px);
+    height: calc(100vh - 76px);
+    max-height: calc(100vh - 76px);
+    border-radius: 16px;
+  }
+
+  .assistant-header {
+    min-height: 64px;
+    padding: 0 13px;
+  }
+
+  .assistant-header-left {
+    gap: 9px;
+  }
+
+  .assistant-orb {
+    width: 35px;
+    height: 35px;
+    flex-basis: 35px;
+  }
+
+  .assistant-heading h3 {
+    font-size: 13px;
+  }
+
+  .assistant-messages {
+    padding: 13px;
+  }
+
+  .assistant-message {
+    max-width: 91%;
+    padding: 10px 12px;
+    font-size: 11.5px;
+    line-height: 1.6;
+  }
+
+  .assistant-input-wrapper {
+    margin: 0 10px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 350px) {
+  .assistant-message {
+    max-width: 94%;
+    font-size: 11px;
+  }
+
+  .assistant-close {
+    width: 29px;
+    height: 29px;
+    flex-basis: 29px;
+    font-size: 19px;
+  }
+}

@@ -1,0 +1,1088 @@
+/* =====================================================
+   CAREER SECTION
+===================================================== */
+
+.career-section {
+  width: 100%;
+  min-height: 100vh;
+
+  position: relative;
+
+  padding: 110px 0 90px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: var(--backgroundColor, #080609);
+
+  color: #f5f2f7;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.career-heading {
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  padding: 0 25px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+
+.career-eyebrow {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--accentColor, #b56cff);
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+
+.career-heading h2 {
+  margin: 0;
+
+  font-size: clamp(42px, 5vw, 72px);
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: -2px;
+}
+
+
+.career-heading h2 span {
+  color: var(--accentColor, #b56cff);
+}
+
+
+.career-heading p {
+  max-width: 650px;
+
+  margin: 22px auto 0;
+
+  color: #77747c;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  font-weight: 300;
+}
+
+
+/* =====================================================
+   CAREER MAP
+===================================================== */
+
+.career-map {
+  width: 100%;
+
+  max-width: 1500px;
+
+  height: 780px;
+
+  margin: 55px auto 0;
+
+  position: relative;
+
+  box-sizing: border-box;
+
+  isolation: isolate;
+}
+
+
+/* =====================================================
+   CONNECTOR SVG
+===================================================== */
+
+.career-connectors {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  overflow: visible;
+}
+
+
+/* Main connector */
+
+.career-connector-line {
+  stroke: rgba(160, 92, 255, 0.28);
+
+  stroke-width: 0.09;
+
+  vector-effect: non-scaling-stroke;
+
+  fill: none;
+
+  transition:
+    stroke 0.35s ease,
+    stroke-width 0.35s ease;
+}
+
+
+/* Slight center glow on lines */
+
+.career-map::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 500px;
+  height: 500px;
+
+  transform: translate(-50%, -50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(145, 67, 255, 0.055) 0%,
+      rgba(145, 67, 255, 0.025) 30%,
+      transparent 70%
+    );
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* =====================================================
+   CENTER AVATAR
+===================================================== */
+
+.career-center {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 250px;
+  height: 250px;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =====================================================
+   CENTER RING
+===================================================== */
+
+.career-center-ring {
+  width: 230px;
+  height: 230px;
+
+  padding: 7px;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e7c5ff 0%,
+      #a44cff 45%,
+      #6f1ed1 100%
+    );
+
+  box-shadow:
+    0 0 15px rgba(170, 83, 255, 0.85),
+    0 0 40px rgba(147, 52, 255, 0.48),
+    0 0 80px rgba(147, 52, 255, 0.20);
+
+  position: relative;
+
+  z-index: 3;
+}
+
+
+/* =====================================================
+   CENTER IMAGE
+===================================================== */
+
+.career-center-image {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  background: #ddd;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  box-sizing: border-box;
+}
+
+
+.career-center-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center center;
+}
+
+
+/* =====================================================
+   CENTER GLOW
+===================================================== */
+
+.career-center-glow {
+  position: absolute;
+
+  width: 270px;
+  height: 270px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(164, 74, 255, 0.22) 0%,
+      rgba(164, 74, 255, 0.09) 35%,
+      transparent 70%
+    );
+
+  filter: blur(12px);
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CENTER DOT
+===================================================== */
+
+.career-center-dot {
+  position: absolute;
+
+  width: 11px;
+  height: 11px;
+
+  top: 5px;
+  right: 17px;
+
+  border-radius: 50%;
+
+  background: #c77dff;
+
+  box-shadow:
+    0 0 8px #c77dff,
+    0 0 22px rgba(190, 100, 255, 0.85);
+
+  z-index: 7;
+}
+
+
+/* =====================================================
+   CENTER LABEL
+===================================================== */
+
+.career-center-label {
+  position: absolute;
+
+  top: 275px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 220px;
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  z-index: 8;
+}
+
+
+.career-center-label span {
+  color: #77717e;
+
+  font-size: 10px;
+
+  letter-spacing: 5px;
+
+  white-space: nowrap;
+}
+
+
+.career-center-label strong {
+  color: #c18aff;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   CAREER CARD
+===================================================== */
+
+.career-card {
+  position: absolute;
+
+  width: 190px;
+
+  min-height: 145px;
+
+  padding: 18px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #343038;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.025),
+      rgba(255, 255, 255, 0.008)
+    );
+
+  z-index: 4;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   CARD TOP ACCENT
+===================================================== */
+
+.career-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 48px;
+  height: 2px;
+
+  background: #c18aff;
+
+  box-shadow:
+    0 0 10px rgba(193, 138, 255, 0.45);
+
+  transition: width 0.35s ease;
+}
+
+
+.career-card:hover {
+  border-color: rgba(180, 111, 255, 0.55);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25),
+    0 0 25px rgba(142, 58, 255, 0.08);
+
+  transform: translateY(-5px);
+}
+
+
+.career-card:hover::before {
+  width: 90px;
+}
+
+
+/* =====================================================
+   CARD POSITIONS
+===================================================== */
+
+
+/* 2018 */
+
+.career-card-top {
+  left: 50%;
+
+  top: 10px;
+
+  transform: translateX(-50%);
+}
+
+
+.career-card-top:hover {
+  transform: translateX(-50%) translateY(-5px);
+}
+
+
+/* 2019 */
+
+.career-card-top-left {
+  left: 6%;
+
+  top: 90px;
+}
+
+
+/* 2020 */
+
+.career-card-top-right {
+  right: 6%;
+
+  top: 90px;
+}
+
+
+/* 2021 */
+
+.career-card-left {
+  left: 0;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+
+.career-card-left:hover {
+  transform: translateY(calc(-50% - 5px));
+}
+
+
+/* 2022 */
+
+.career-card-right {
+  right: 0;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+
+.career-card-right:hover {
+  transform: translateY(calc(-50% - 5px));
+}
+
+
+/* 2023 */
+
+.career-card-bottom-left {
+  left: 6%;
+
+  bottom: 45px;
+}
+
+
+/* 2024 */
+
+.career-card-bottom-right {
+  right: 6%;
+
+  bottom: 45px;
+}
+
+
+/* 2025 */
+
+.career-card-bottom {
+  left: 50%;
+
+  bottom: 0;
+
+  transform: translateX(-50%);
+}
+
+
+.career-card-bottom:hover {
+  transform: translateX(-50%) translateY(-5px);
+}
+
+
+/* =====================================================
+   CARD ICON
+===================================================== */
+
+.career-card-icon {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid rgba(174, 91, 255, 0.45);
+
+  background: rgba(136, 48, 218, 0.06);
+
+  color: #c28aff;
+
+  font-size: 12px;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.career-card:hover .career-card-icon {
+  background: rgba(165, 80, 255, 0.16);
+
+  border-color: #bd7cff;
+
+  color: #e0bfff;
+}
+
+
+/* =====================================================
+   YEAR
+===================================================== */
+
+.career-year {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: 0;
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.career-card h3 {
+  margin: 0;
+
+  padding-right: 35px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  line-height: 1.3;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   CARD SMALL LINE
+===================================================== */
+
+.career-card-line {
+  width: 30px;
+
+  height: 1px;
+
+  margin: 10px 0;
+
+  background: #9c5be0;
+
+  opacity: 0.8;
+}
+
+
+/* =====================================================
+   CARD DESCRIPTION
+===================================================== */
+
+.career-card p {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  line-height: 1.65;
+
+  font-weight: 300;
+}
+
+
+/* =====================================================
+   CARD NUMBER
+===================================================== */
+
+.career-card-number {
+  position: absolute;
+
+  right: 13px;
+  bottom: 10px;
+
+  color: #ffffff;
+
+  font-size: 9px;
+
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   BOTTOM INFO
+===================================================== */
+
+.career-bottom {
+  width: 100%;
+
+  max-width: 1000px;
+
+  margin: 30px auto 0;
+
+  padding: 0 25px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 45px;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+
+.career-bottom-line {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  width: 100%;
+
+  height: 1px;
+
+  transform: translate(-50%, -50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #29252c,
+      transparent
+    );
+
+  z-index: -1;
+}
+
+
+.career-bottom span {
+  padding: 0 12px;
+
+  background: var(--backgroundColor, #080609);
+
+  color: #625e66;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media only screen and (max-width: 1300px) {
+
+  .career-map {
+    max-width: 1250px;
+
+    height: 740px;
+  }
+
+  .career-card {
+    width: 185px;
+  }
+
+  .career-card-top-left {
+    left: 4%;
+  }
+
+  .career-card-top-right {
+    right: 4%;
+  }
+
+  .career-card-bottom-left {
+    left: 4%;
+  }
+
+  .career-card-bottom-right {
+    right: 4%;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media only screen and (max-width: 1000px) {
+
+  .career-section {
+    padding-top: 90px;
+  }
+
+  .career-map {
+    height: 900px;
+
+    margin-top: 50px;
+  }
+
+  .career-center {
+    width: 220px;
+    height: 220px;
+  }
+
+  .career-center-ring {
+    width: 205px;
+    height: 205px;
+  }
+
+  .career-card {
+    width: 175px;
+
+    min-height: 135px;
+
+    padding: 15px;
+  }
+
+  .career-card-top-left {
+    left: 2%;
+  }
+
+  .career-card-top-right {
+    right: 2%;
+  }
+
+  .career-card-bottom-left {
+    left: 2%;
+  }
+
+  .career-card-bottom-right {
+    right: 2%;
+  }
+
+  .career-card-left {
+    left: 0;
+  }
+
+  .career-card-right {
+    right: 0;
+  }
+
+  .career-bottom {
+    gap: 20px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media only screen and (max-width: 700px) {
+
+  .career-section {
+    padding: 75px 0 60px;
+  }
+
+  .career-heading {
+    padding: 0 20px;
+  }
+
+  .career-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+
+  .career-heading h2 {
+    font-size: 42px;
+
+    letter-spacing: -1px;
+  }
+
+  .career-heading p {
+    font-size: 13px;
+  }
+
+
+  /* ---------------------------------------------
+     MOBILE MAP
+  --------------------------------------------- */
+
+  .career-map {
+    height: auto;
+
+    margin-top: 50px;
+
+    padding: 0 20px 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* Hide desktop SVG on mobile */
+
+  .career-connectors {
+    display: none;
+  }
+
+
+  /* Center comes first */
+
+  .career-center {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    width: 210px;
+    height: 285px;
+
+    transform: none;
+
+    flex-shrink: 0;
+  }
+
+
+  .career-center-ring {
+    width: 190px;
+    height: 190px;
+  }
+
+
+  .career-center-glow {
+    width: 230px;
+    height: 230px;
+  }
+
+
+  .career-center-dot {
+    top: 15px;
+    right: 20px;
+  }
+
+
+  .career-center-label {
+    top: 215px;
+  }
+
+
+  /* ---------------------------------------------
+     MOBILE CARDS
+  --------------------------------------------- */
+
+  .career-card {
+    position: relative;
+
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+
+    transform: none !important;
+
+    width: 100%;
+
+    max-width: 390px;
+
+    min-height: 145px;
+  }
+
+
+  .career-card:hover {
+    transform: translateY(-4px) !important;
+  }
+
+
+  /* Order */
+
+  .career-card-top {
+    order: 1;
+  }
+
+  .career-card-top-left {
+    order: 2;
+  }
+
+  .career-card-top-right {
+    order: 3;
+  }
+
+  .career-card-left {
+    order: 4;
+  }
+
+  .career-card-right {
+    order: 5;
+  }
+
+  .career-card-bottom-left {
+    order: 6;
+  }
+
+  .career-card-bottom-right {
+    order: 7;
+  }
+
+  .career-card-bottom {
+    order: 8;
+  }
+
+
+  /* ---------------------------------------------
+     BOTTOM INFO
+  --------------------------------------------- */
+
+  .career-bottom {
+    flex-wrap: wrap;
+
+    gap: 12px 20px;
+
+    margin-top: 20px;
+  }
+
+  .career-bottom-line {
+    display: none;
+  }
+
+  .career-bottom span {
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media only screen and (max-width: 450px) {
+
+  .career-heading h2 {
+    font-size: 36px;
+  }
+
+  .career-map {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .career-card {
+    max-width: 100%;
+
+    padding: 16px;
+  }
+
+  .career-year {
+    font-size: 23px;
+  }
+
+  .career-card h3 {
+    font-size: 12px;
+  }
+
+  .career-card p {
+    font-size: 10px;
+  }
+
+  .career-bottom {
+    padding: 0 15px;
+  }
+
+}

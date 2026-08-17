@@ -1,0 +1,615 @@
+/* =====================================================
+   EXTRA DATA / PERSONAL PROFILE
+===================================================== */
+
+.extra-data-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--backgroundColor);
+  color: #f5f2f7;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.extra-data-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  padding: 100px 7% 70px;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.extra-data-heading {
+  margin-bottom: 55px;
+  position: relative;
+}
+
+.extra-small-title {
+  display: block;
+  color: var(--accentColor);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+}
+
+.extra-data-heading h2 {
+  margin: 0;
+  font-size: 70px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.extra-data-heading h2 span {
+  color: var(--accentColor);
+}
+
+.extra-data-heading > p {
+  margin-top: 18px;
+  color: #999;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+
+/* =====================================================
+   MAIN GRID
+===================================================== */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: stretch;
+}
+
+
+/* =====================================================
+   GENERAL CARD
+===================================================== */
+
+.profile-card {
+  position: relative;
+  border: 1px solid #343034;
+  background: rgba(255, 255, 255, 0.015);
+  box-sizing: border-box;
+  padding: 35px;
+  overflow: hidden;
+  transition: 0.35s ease;
+}
+
+.profile-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: var(--accentColor);
+
+  transform: scaleX(0.15);
+  transform-origin: left;
+
+  transition: 0.4s ease;
+}
+
+.profile-card:hover {
+  border-color: #4a414f;
+  transform: translateY(-3px);
+}
+
+.profile-card:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =====================================================
+   CARD HEADING
+===================================================== */
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.card-number {
+  font-size: 16px;
+  color: var(--accentColor);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.card-heading h3 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.card-heading p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #888;
+  font-weight: 300;
+}
+
+
+/* =====================================================
+   EDUCATION
+===================================================== */
+
+.education-list {
+  position: relative;
+  padding-left: 10px;
+}
+
+.education-item {
+  position: relative;
+  display: flex;
+  gap: 22px;
+  padding-bottom: 28px;
+}
+
+.education-item:last-child {
+  padding-bottom: 0;
+}
+
+.education-item:not(:last-child)::before {
+  content: "";
+
+  position: absolute;
+
+  left: 4px;
+  top: 12px;
+
+  width: 1px;
+  height: calc(100% - 5px);
+
+  background: #3c383e;
+}
+
+.education-dot {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  margin-top: 6px;
+
+  background: var(--accentColor);
+
+  box-shadow: 0 0 10px var(--accentColor);
+}
+
+.education-level {
+  display: block;
+
+  font-size: 11px;
+  letter-spacing: 2px;
+
+  color: var(--accentColor);
+
+  margin-bottom: 6px;
+}
+
+.education-content h4 {
+  margin: 0;
+
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.education-content p {
+  margin: 5px 0;
+
+  font-size: 14px;
+  color: #aaa;
+}
+
+.education-content small {
+  color: #666;
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   BIO DATA
+===================================================== */
+
+.biodata-list {
+  width: 100%;
+}
+
+.bio-row {
+  display: grid;
+
+  grid-template-columns: 125px 1fr;
+
+  gap: 15px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid #2d2a2f;
+}
+
+.bio-row:first-child {
+  padding-top: 0;
+}
+
+.bio-row:last-child {
+  border-bottom: none;
+}
+
+.bio-row span {
+  color: #777;
+
+  font-size: 13px;
+
+  font-weight: 300;
+}
+
+.bio-row strong {
+  color: #e9e5ec;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  text-align: right;
+}
+
+
+/* =====================================================
+   BOARD EXAMINATIONS
+===================================================== */
+
+.board-card {
+  margin-top: 25px;
+}
+
+.board-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.board-item {
+  min-height: 150px;
+
+  padding: 22px;
+
+  border: 1px solid #302d32;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  transition: 0.3s ease;
+}
+
+.board-item:hover {
+  border-color: var(--accentColor);
+
+  transform: translateY(-4px);
+}
+
+.board-item > span {
+  color: var(--accentColor);
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+}
+
+.board-item h4 {
+  margin: 20px 0 5px;
+
+  font-size: 22px;
+
+  font-weight: 500;
+}
+
+.board-item p {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: #aaa;
+
+  line-height: 1.5;
+}
+
+.board-item small {
+  display: block;
+
+  margin-top: 12px;
+
+  font-size: 11px;
+
+  color: #666;
+}
+
+
+/* =====================================================
+   BUSINESS EXPERIENCE
+===================================================== */
+
+.business-card {
+  margin-top: 25px;
+}
+
+.business-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+.business-item {
+  display: flex;
+
+  gap: 20px;
+
+  padding: 25px;
+
+  border: 1px solid #302d32;
+
+  transition: 0.3s ease;
+}
+
+.business-item:hover {
+  border-color: var(--accentColor);
+
+  transform: translateY(-3px);
+}
+
+.business-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--accentColor);
+
+  color: var(--accentColor);
+
+  font-size: 12px;
+}
+
+.business-item span {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: var(--accentColor);
+}
+
+.business-item h4 {
+  margin: 7px 0;
+
+  font-size: 22px;
+
+  font-weight: 500;
+}
+
+.business-item p {
+  margin: 0;
+
+  color: #999;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   PROFESSIONAL SUMMARY
+===================================================== */
+
+.summary-card {
+  margin-top: 25px;
+}
+
+.summary-content {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 35px;
+}
+
+.summary-content p {
+  margin: 0;
+
+  color: #aaa;
+
+  font-size: 15px;
+
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  padding-left: 20px;
+
+  border-left: 1px solid var(--accentColor);
+}
+
+
+/* =====================================================
+   PROFILE FOOTER
+===================================================== */
+
+.profile-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding-top: 45px;
+
+  margin-top: 20px;
+}
+
+.profile-footer span {
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  color: var(--accentColor);
+}
+
+.profile-footer p {
+  margin: 0;
+
+  font-size: 11px;
+
+  color: #555;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media only screen and (max-width: 1100px) {
+
+  .extra-data-container {
+    padding: 80px 5%;
+  }
+
+  .extra-data-heading h2 {
+    font-size: 60px;
+  }
+
+  .profile-card {
+    padding: 28px;
+  }
+
+  .bio-row {
+    grid-template-columns: 110px 1fr;
+  }
+
+  .board-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .summary-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media only screen and (max-width: 800px) {
+
+  .extra-data-container {
+    padding: 70px 25px;
+  }
+
+  .extra-data-heading {
+    margin-bottom: 40px;
+  }
+
+  .extra-data-heading h2 {
+    font-size: 48px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .board-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-card {
+    padding: 25px;
+  }
+
+  .card-heading h3 {
+    font-size: 22px;
+  }
+
+  .summary-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media only screen and (max-width: 500px) {
+
+  .extra-data-container {
+    padding: 60px 18px;
+  }
+
+  .extra-data-heading h2 {
+    font-size: 40px;
+  }
+
+  .extra-small-title {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+  }
+
+  .board-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-row {
+    grid-template-columns: 1fr;
+
+    gap: 5px;
+  }
+
+  .bio-row strong {
+    text-align: left;
+  }
+
+  .profile-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .summary-content p {
+    font-size: 14px;
+  }
+}

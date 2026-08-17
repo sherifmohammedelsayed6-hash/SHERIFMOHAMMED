@@ -1,0 +1,713 @@
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
+
+.contact-section {
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: var(--backgroundColor);
+
+  color: #f5f2f7;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.contact-container {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: auto;
+
+  padding: 120px 7% 45px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.contact-heading {
+  margin-bottom: 65px;
+}
+
+.contact-heading > span {
+  display: block;
+
+  color: var(--accentColor);
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 18px;
+}
+
+.contact-heading h3 {
+  margin: 0;
+
+  font-size: 75px;
+
+  line-height: 0.95;
+
+  font-weight: 400;
+}
+
+.contact-heading h3 strong {
+  color: var(--accentColor);
+
+  font-weight: 500;
+}
+
+.contact-heading p {
+  margin: 22px 0 0;
+
+  max-width: 550px;
+
+  color: #888;
+
+  font-size: 15px;
+
+  font-weight: 300;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   MAIN FLEX
+===================================================== */
+
+.contact-flex {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    0.85fr
+    1fr;
+
+  gap: 20px;
+
+  align-items: stretch;
+}
+
+
+/* =====================================================
+   CONTACT BOX
+===================================================== */
+
+.contact-box {
+  position: relative;
+
+  min-height: 400px;
+
+  padding: 32px;
+
+  border: 1px solid #343034;
+
+  background: rgba(255, 255, 255, 0.015);
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+}
+
+.contact-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: var(--accentColor);
+
+  transform: scaleX(0.15);
+
+  transform-origin: left;
+
+  transition: 0.4s ease;
+}
+
+.contact-box:hover {
+  border-color: #4a414f;
+
+  transform: translateY(-3px);
+}
+
+.contact-box:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =====================================================
+   BOX TITLE
+===================================================== */
+
+.contact-box-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+.contact-box-title > span {
+  color: var(--accentColor);
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+.contact-box-title h4 {
+  margin: 0;
+
+  font-size: 25px;
+
+  font-weight: 500;
+}
+
+.contact-box-title p {
+  margin: 5px 0 0;
+
+  color: #777;
+
+  font-size: 12px;
+
+  font-weight: 300;
+}
+
+
+/* =====================================================
+   CONTACT INFO
+===================================================== */
+
+.contact-info-link {
+  display: grid;
+
+  grid-template-columns:
+    45px
+    1fr
+    20px;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 17px 0;
+
+  border-bottom: 1px solid #2c292e;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.contact-info-link:last-child {
+  border-bottom: none;
+}
+
+.contact-info-link:hover {
+  color: var(--accentColor);
+}
+
+.contact-info-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #3a353d;
+
+  color: var(--accentColor);
+
+  font-size: 19px;
+
+  transition: 0.3s ease;
+}
+
+.contact-info-link:hover .contact-info-icon {
+  border-color: var(--accentColor);
+
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.contact-info-link small {
+  display: block;
+
+  color: #666;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 5px;
+}
+
+.contact-info-link strong {
+  display: block;
+
+  color: #ddd;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  word-break: break-word;
+}
+
+.contact-arrow {
+  color: #555;
+
+  font-size: 18px;
+
+  transition: 0.3s ease;
+}
+
+.contact-info-link:hover .contact-arrow {
+  color: var(--accentColor);
+
+  transform: translate(3px, -3px);
+}
+
+
+/* =====================================================
+   SOCIAL LIST
+===================================================== */
+
+.contact-social-list {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.contact-social {
+  display: grid;
+
+  grid-template-columns:
+    40px
+    1fr
+    20px;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid #2c292e;
+
+  color: #ddd;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.contact-social:last-child {
+  border-bottom: none;
+}
+
+.contact-social:hover {
+  color: var(--accentColor);
+
+  padding-left: 7px;
+}
+
+.social-contact-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #373239;
+
+  color: #aaa;
+
+  font-size: 16px;
+
+  transition: 0.3s ease;
+}
+
+.contact-social:hover .social-contact-icon {
+  color: var(--accentColor);
+
+  border-color: var(--accentColor);
+}
+
+.contact-social > span {
+  font-size: 14px;
+
+  font-weight: 400;
+}
+
+.contact-social > svg {
+  color: #555;
+
+  transition: 0.3s ease;
+}
+
+.contact-social:hover > svg {
+  color: var(--accentColor);
+
+  transform: translate(3px, -3px);
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.contact-cta {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.contact-cta-number {
+  color: var(--accentColor);
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+.contact-cta h2 {
+  margin: 40px 0 20px;
+
+  font-size: 47px;
+
+  line-height: 1.05;
+
+  font-weight: 400;
+}
+
+.contact-cta h2 span {
+  color: var(--accentColor);
+}
+
+.contact-cta p {
+  margin: 0;
+
+  max-width: 390px;
+
+  color: #888;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  font-weight: 300;
+}
+
+
+/* =====================================================
+   EMAIL BUTTON
+===================================================== */
+
+.contact-mail-button {
+  width: fit-content;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 35px;
+
+  padding: 13px 18px;
+
+  border: 1px solid var(--accentColor);
+
+  color: #eee;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition: 0.3s ease;
+}
+
+.contact-mail-button svg {
+  font-size: 17px;
+
+  transition: 0.3s ease;
+}
+
+.contact-mail-button:hover {
+  background: var(--accentColor);
+
+  color: #fff;
+}
+
+.contact-mail-button:hover svg {
+  transform: translate(3px, -3px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.contact-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  padding-top: 45px;
+
+  margin-top: 45px;
+
+  border-top: 1px solid #29262b;
+}
+
+.contact-footer > div:first-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.contact-footer strong {
+  color: var(--accentColor);
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  font-weight: 500;
+}
+
+.contact-footer > div:first-child span {
+  color: #555;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+.contact-copyright {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #555;
+
+  font-size: 10px;
+}
+
+.contact-copyright svg {
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media only screen and (max-width: 1200px) {
+
+  .contact-container {
+    padding: 100px 5% 40px;
+  }
+
+  .contact-heading h3 {
+    font-size: 65px;
+  }
+
+  .contact-flex {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-cta {
+    grid-column: 1 / -1;
+
+    min-height: 330px;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media only screen and (max-width: 900px) {
+
+  .contact-container {
+    padding: 90px 30px 40px;
+  }
+
+  .contact-heading {
+    margin-bottom: 45px;
+  }
+
+  .contact-heading h3 {
+    font-size: 55px;
+  }
+
+  .contact-flex {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-box {
+    min-height: auto;
+  }
+
+  .contact-cta {
+    grid-column: auto;
+
+    min-height: 350px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media only screen and (max-width: 600px) {
+
+  .contact-container {
+    padding: 80px 20px 30px;
+  }
+
+  .contact-heading > span {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+
+  .contact-heading h3 {
+    font-size: 43px;
+  }
+
+  .contact-heading p {
+    font-size: 13px;
+  }
+
+  .contact-box {
+    padding: 24px;
+
+    min-height: auto;
+  }
+
+  .contact-box-title {
+    margin-bottom: 22px;
+  }
+
+  .contact-box-title h4 {
+    font-size: 22px;
+  }
+
+  .contact-info-link {
+    grid-template-columns:
+      40px
+      1fr
+      18px;
+
+    gap: 12px;
+  }
+
+  .contact-info-icon {
+    width: 38px;
+    height: 38px;
+
+    font-size: 17px;
+  }
+
+  .contact-info-link strong {
+    font-size: 12px;
+  }
+
+  .contact-cta {
+    min-height: 330px;
+  }
+
+  .contact-cta h2 {
+    font-size: 38px;
+
+    margin-top: 35px;
+  }
+
+  .contact-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media only screen and (max-width: 400px) {
+
+  .contact-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contact-heading h3 {
+    font-size: 37px;
+  }
+
+  .contact-box {
+    padding: 20px;
+  }
+
+  .contact-cta h2 {
+    font-size: 34px;
+  }
+
+  .contact-info-link strong {
+    font-size: 11px;
+  }
+
+}
