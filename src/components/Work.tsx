@@ -72,7 +72,7 @@ const Work = () => {
         return flex.scrollWidth - window.innerWidth;
       };
 
-      const animation = gsap.to(flex, {
+      gsap.to(flex, {
         x: () => -getScrollAmount(),
         ease: "none",
         scrollTrigger: {
