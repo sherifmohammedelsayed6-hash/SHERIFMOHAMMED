@@ -21,3 +21,4 @@ export const decryptFile = async (
   const key = await generateAESKey(password);
   return crypto.subtle.decrypt({ name: "AES-CBC", iv }, key, data);
 };
+

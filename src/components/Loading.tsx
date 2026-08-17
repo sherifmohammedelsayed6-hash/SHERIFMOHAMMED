@@ -133,3 +133,4 @@ export const setProgress = (setLoading: (value: number) => void) => {
   }
   return { loaded, percent, clear };
 };
+

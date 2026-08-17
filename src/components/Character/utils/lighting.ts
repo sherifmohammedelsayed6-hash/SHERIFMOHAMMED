@@ -59,3 +59,4 @@ const setLighting = (scene: THREE.Scene) => {
 };
 
 export default setLighting;
+

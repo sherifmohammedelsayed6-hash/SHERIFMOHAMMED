@@ -33,3 +33,4 @@ const Landing = ({ children }: PropsWithChildren) => {
 };
 
 export default Landing;
+
