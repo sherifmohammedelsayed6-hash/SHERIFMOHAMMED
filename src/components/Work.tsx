@@ -28,7 +28,7 @@ const workData = [
     title: "Project Three",
     category: "E-Commerce Platform",
     description: "Scalable online shopping solution integrated with secure payment systems.",
-    image: "/images/placeholder.webp",
+    image: "/images/work1.webp",
     link: "https://example.com",
   },
   {
@@ -52,7 +52,7 @@ const workData = [
     title: "Project Six",
     category: "Portfolio & Brand",
     description: "Creative portfolio showcase featuring smooth animations and 3D interactions.",
-    image: "/images/placeholder.webp",
+    image: "/images/work1.webp",
     link: "https://example.com",
   },
 ];
