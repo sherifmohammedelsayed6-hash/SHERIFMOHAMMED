@@ -76,7 +76,7 @@ const ExtraData = () => {
                   </span>
 
                   <h4>
-                    Sunrise Academy
+                    ***** Academy
                   </h4>
 
                   <p>
@@ -84,7 +84,7 @@ const ExtraData = () => {
                   </p>
 
                   <small>
-                    Feni, Bangladesh
+                    Egypt
                   </small>
 
                 </div>
@@ -105,7 +105,7 @@ const ExtraData = () => {
                   </span>
 
                   <h4>
-                    Dhalia High School
+                    ***** High School
                   </h4>
 
                   <p>
@@ -113,7 +113,7 @@ const ExtraData = () => {
                   </p>
 
                   <small>
-                    Feni, Bangladesh
+                    Egypt
                   </small>
 
                 </div>
@@ -134,7 +134,7 @@ const ExtraData = () => {
                   </span>
 
                   <h4>
-                    Sonagazi Government College
+                    ***** Government College
                   </h4>
 
                   <p>
@@ -142,7 +142,7 @@ const ExtraData = () => {
                   </p>
 
                   <small>
-                    Feni, Bangladesh
+                    Egypt
                   </small>
 
                 </div>
@@ -163,7 +163,7 @@ const ExtraData = () => {
                   </span>
 
                   <h4>
-                    Feni University
+                    ***** University
                   </h4>
 
                   <p>
@@ -171,7 +171,7 @@ const ExtraData = () => {
                   </p>
 
                   <small>
-                    Feni, Bangladesh
+                    Egypt
                   </small>
 
                 </div>
@@ -277,7 +277,7 @@ const ExtraData = () => {
               <div className="bio-row">
                 <span>Home</span>
                 <strong>
-                  Ibrahim Peshker Bari
+                  ****************
                 </strong>
               </div>
 
@@ -285,8 +285,7 @@ const ExtraData = () => {
               <div className="bio-row">
                 <span>Address</span>
                 <strong>
-                  Dhalia Bazar, Feni - 3900,
-                  Bangladesh
+                  Egypt
                 </strong>
               </div>
 
@@ -341,7 +340,7 @@ const ExtraData = () => {
               </p>
 
               <small>
-                Feni, Bangladesh
+                Egypt
               </small>
 
             </div>
@@ -364,7 +363,7 @@ const ExtraData = () => {
               </p>
 
               <small>
-                Feni, Bangladesh
+                Egypt
               </small>
 
             </div>
@@ -387,7 +386,7 @@ const ExtraData = () => {
               </p>
 
               <small>
-                Feni, Bangladesh
+                Egypt
               </small>
 
             </div>
@@ -410,7 +409,7 @@ const ExtraData = () => {
               </p>
 
               <small>
-                Feni, Bangladesh
+                Egypt
               </small>
 
             </div>
@@ -462,7 +461,7 @@ const ExtraData = () => {
                 </span>
 
                 <h4>
-                  Fenian Fashion
+                  **** xyz
                 </h4>
 
                 <p>
@@ -490,11 +489,11 @@ const ExtraData = () => {
                 </span>
 
                 <h4>
-                  Nexoria BD
+                  **** xyz
                 </h4>
 
                 <p>
-                  Independent business venture in Bangladesh
+                  Independent business venture in Egypt
                   focused on modern products and digital business
                   opportunities.
                 </p>
@@ -564,7 +563,7 @@ const ExtraData = () => {
           </span>
 
           <p>
-            PERSONAL PROFILE • FENI, BANGLADESH
+            PERSONAL PROFILE • Egypt
           </p>
 
         </div>

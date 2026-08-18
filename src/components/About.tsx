@@ -6,7 +6,10 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          8 years at Arabian Hunter (2018–Present), combining expertise in Air Gun Technology, E-Commerce, Sales, Odoo, and Customer Service with a passion for technology and smart digital solutions.
+          I’m a dedicated Sales Manager and Purchase Department professional with experience in sales,
+           purchasing, customer service, and business operations. I’m focused on achieving strong results, 
+           building lasting customer relationships,
+           and supporting business growth through effective management and teamwork.
         </p>
       </div>
     </div>
